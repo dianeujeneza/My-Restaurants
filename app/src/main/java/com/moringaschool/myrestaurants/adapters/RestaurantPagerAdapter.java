@@ -5,14 +5,15 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.moringaschool.myrestaurants.models.Business;
+import com.moringaschool.myrestaurants.models.Restaurant;
 import com.moringaschool.myrestaurants.ui.RestaurantDetailFragment;
 
 import java.util.List;
 
 public class RestaurantPagerAdapter extends FragmentPagerAdapter {
-    private List<Business> mRestaurants;
+    private List<Restaurant> mRestaurants;
 
-    public RestaurantPagerAdapter(FragmentManager fm, int behavior, List<Business> restaurants) {
+    public RestaurantPagerAdapter(FragmentManager fm, int behavior, List<Restaurant> restaurants) {
         super(fm, behavior);
         mRestaurants = restaurants;
     }

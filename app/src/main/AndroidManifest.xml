@@ -11,14 +11,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.RestaurantDetailActivity"></activity>
+        <activity android:name=".ui.MainActivity"
+                  >
+
+        </activity>
+        <activity android:name=".ui.CreateAccountActivity" />
+        <activity android:name=".ui.SavedRestaurantListActivity" />
+        <activity android:name=".ui.RestaurantDetailActivity" />
         <activity android:name=".ui.RestaurantsActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.moringaschool.myrestaurants.ui.MainActivity"></meta-data>
+                android:value="com.moringaschool.myrestaurants.ui.MainActivity" />
         </activity>
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".ui.LoginActivity"
             android:theme="@style/NoActionBarTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

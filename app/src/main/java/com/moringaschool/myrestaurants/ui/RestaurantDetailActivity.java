@@ -9,6 +9,7 @@ import android.os.Bundle;
 import com.moringaschool.myrestaurants.R;
 import com.moringaschool.myrestaurants.adapters.RestaurantPagerAdapter;
 import com.moringaschool.myrestaurants.models.Business;
+import com.moringaschool.myrestaurants.models.Restaurant;
 
 import org.parceler.Parcels;
 
@@ -22,7 +23,7 @@ RestaurantDetailActivity extends AppCompatActivity {
 
     @BindView(R.id.viewPager) ViewPager mViewPager;
     private RestaurantPagerAdapter adapterViewPager;
-    List<Business> mRestaurants;
+    List<Restaurant> mRestaurants;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

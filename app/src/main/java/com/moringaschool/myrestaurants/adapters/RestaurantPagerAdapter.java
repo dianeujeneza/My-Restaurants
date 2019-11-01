@@ -4,32 +4,34 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import com.moringaschool.myrestaurants.models.Business;
 import com.moringaschool.myrestaurants.models.Restaurant;
 import com.moringaschool.myrestaurants.ui.RestaurantDetailFragment;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class RestaurantPagerAdapter extends FragmentPagerAdapter {
-    private List<Restaurant> mRestaurants;
+    private ArrayList<Restaurant> mRestaurants;
+    private String mSource;
 
-    public RestaurantPagerAdapter(FragmentManager fm, int behavior, List<Restaurant> restaurants) {
-        super(fm, behavior);
+    public RestaurantPagerAdapter(FragmentManager fm, ArrayList<Restaurant> restaurants, String source){
+        super(fm);
         mRestaurants = restaurants;
+        mSource = source;
     }
 
     @Override
-    public Fragment getItem(int position) {
-        return RestaurantDetailFragment.newInstance(mRestaurants.get(position));
+    public Fragment getItem(int position){
+        return RestaurantDetailFragment.newInstance(mRestaurants, position, mSource);
     }
 
     @Override
-    public int getCount() {
+    public int getCount(){
         return mRestaurants.size();
     }
 
     @Override
-    public CharSequence getPageTitle(int position) {
+    public CharSequence getPageTitle(int position){
         return mRestaurants.get(position).getName();
     }
 }
